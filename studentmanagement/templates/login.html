@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2 align ="center">registration page</h2>
+<form  method="post">
+    {% csrf_token %}
+    <h3 style="color:red" align="center">{{ data }}</h3>
+
+    <table align="center">
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="txtname"></td>
+        </tr>
+
+        <tr>
+            <td>Userpassword</td>
+            <td><input type="password" name="txtpassword"></td>
+        </tr>
+        <tr>
+
+            <td><input type="submit" name="register"></td>
+            <td><a href="{% url 'register' %}">Signup</a></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
